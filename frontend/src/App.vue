@@ -1,9 +1,9 @@
 <template>
   <v-app>
 
-    <v-app-bar app color="blue">
+    <v-app-bar app>
       <v-app-bar-title>
-        <h3 class="text-h4 white--text">Cleaning</h3>
+        <a href="">Cleaning</a>
       </v-app-bar-title>
     </v-app-bar>
 
