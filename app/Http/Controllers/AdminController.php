@@ -11,8 +11,8 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $clients = Client::orderByDesc('updated_at')->paginate(5);
-        $orders = Order::orderByDesc('updated_at')->paginate(5);
+        $clients = Client::orderByDesc('updated_at')->get();
+        $orders = Order::orderByDesc('updated_at')->get();
         $statuses = ['created', 'paid', 'completed', 'canceled'];
 
         $firstDayOfThisMonth = Carbon::now()->startOfMonth();
@@ -30,7 +30,7 @@ class AdminController extends Controller
             ->where('created_at', '<=', $lastDayOfThisMonth)
             ->count();
 
-        return view('dashboard', [
+        return response()->json([
             'clients' => $clients,
             'orders' => $orders,
             'statuses' => $statuses,

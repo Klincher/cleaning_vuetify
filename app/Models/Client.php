@@ -10,7 +10,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Client extends Model
 {
     use HasFactory;
-    use Billable;
 
     /**
      * The attributes that are mass assignable.

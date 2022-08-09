@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkfrontend"]=self["webpackChunkfrontend"]||[]).push([[408],{6408:function(n,t,u){u.r(t),u.d(t,{default:function(){return a}});var e=function(){var n=this,t=n._self._c;return t("div",{staticClass:"home"},[n._v(" Client huylusha ")])},l=[],s=u(1001),r={},f=(0,s.Z)(r,e,l,!1,null,null,null),a=f.exports}}]);
+//# sourceMappingURL=408.f40247c5.js.map

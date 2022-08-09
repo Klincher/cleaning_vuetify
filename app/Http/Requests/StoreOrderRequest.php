@@ -28,8 +28,8 @@ class StoreOrderRequest extends FormRequest
             'first_name' => 'required|alpha|max:100',
             'last_name' => 'required|alpha|max:100',
             'email' => 'required|email:rfc',
-            'address' => 'required|max:255',
-            'area' => 'required|max:255'
+            // 'address' => 'required|max:255',
+            // 'area' => 'required|max:255'
         ];
     }
 
@@ -40,8 +40,8 @@ class StoreOrderRequest extends FormRequest
             'first_name.required' => 'Please enter a First Name',
             'last_name.required' => 'Please enter a Last Name',
             'email.required' => 'Please enter an Email',
-            'address.required' => 'Please enter a Address',
-            'area.required' => 'Please enter a Area'
+            // 'address.required' => 'Please enter a Address',
+            // 'area.required' => 'Please enter a Area'
         ];
     }
 }

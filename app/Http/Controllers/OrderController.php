@@ -46,29 +46,29 @@ class OrderController extends Controller
             ]
         );
 
-        if ($request->session()->has('order_id')) {
-            $order = Order::find(intval(session()->get('order_id')));
-        } else {
-            $order = new Order;
-            $order->client_id = $client->id;
-        }
+        // if ($request->session()->has('order_id')) {
+        //     $order = Order::find(intval(session()->get('order_id')));
+        // } else {
+        //     $order = new Order;
+        //     $order->client_id = $client->id;
+        // // }
 
-        $order->status = 'created';
-        $order->sum = $sum;
-        $order->address = $request->address;
-        $order->area = $request->area;
-        $order->rooms = $request->rooms ?? 0;
-        $order->bathrooms = $request->bathrooms ?? 0;
-        $order->kitchens = $request->kitchens ?? 0;
-        $order->fridges = $request->fridges ?? 0;
-        $order->wardrobes = $request->wardrobes ?? 0;
-        $order->animals = $request->animals ?? 0;
-        $order->adults = $request->adults ?? 0;
-        $order->children = $request->children ?? 0;
-        $order->save();
+        // $order->status = 'created';
+        // $order->sum = $sum;
+        // $order->address = $request->address;
+        // $order->area = $request->area;
+        // $order->rooms = $request->rooms ?? 0;
+        // $order->bathrooms = $request->bathrooms ?? 0;
+        // $order->kitchens = $request->kitchens ?? 0;
+        // $order->fridges = $request->fridges ?? 0;
+        // $order->wardrobes = $request->wardrobes ?? 0;
+        // $order->animals = $request->animals ?? 0;
+        // $order->adults = $request->adults ?? 0;
+        // $order->children = $request->children ?? 0;
+        // $order->save();
 
-        session(['order_id' => $order->id]);
+        // session(['order_id' => $order->id]);
 
-        return redirect()->route('result', ['id' => $order->id]);
+        // return redirect()->route('result');
     }
 }
